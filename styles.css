@@ -75,7 +75,7 @@ h1{
     color: var(--blue);
     font-family: var(--font);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -188,8 +188,6 @@ input:checked ~ label span:after {
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
-
-
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
 .logo-name {
   position: relative;
@@ -206,6 +204,15 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
+h2{
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: bold;
+    font-family: var(--font);
+}
+
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
