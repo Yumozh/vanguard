@@ -229,8 +229,8 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
 }
+
 .company-tagline{
     padding: 0 1rem;
 }
@@ -262,12 +262,23 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     border-radius: 5px;
     border: none;
     padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.company-tagline button:hover {
+   background-color: var(--red);
+   transform: scale(1.07, 1.07);
 }
 
 .white-background h2{
     margin-top: 2rem;
     margin-bottom: 1.5rem;
+    
 }
+
+
+
 .white-background p{
     color: var(--black);
 }
@@ -311,7 +322,13 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     padding: 1.5rem 1rem;
     border-radius: 7px;
     color: var(--white);
+    transition: transform 0.3s ease-in-out;
+
 }
+.offer-list >section:hover{
+    transform: translate(0px, -5px);
+}
+
 .offer-list p{
     color: var(--white);
 }
@@ -454,8 +471,14 @@ form button{
     padding: 1rem;
     margin-top: 1rem;
     width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
+form button:hover {
+   background-color: var(--red);
+   transform: scale(1.01, 1.01);
+}
 footer{
     background-color: var(--black);
     border: none;
@@ -475,6 +498,8 @@ footer .phone{
 footer .email{
     color: var(--blue);
 }
+
+
 /* MEDIA QUERIES (MEDIUM) */ 
 
     #results {
