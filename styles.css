@@ -319,6 +319,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 
 .offer-list > section{
     background-color: var(--blue);
+    height: auto;
     padding: 1.5rem 1rem;
     border-radius: 7px;
     color: var(--white);
@@ -501,6 +502,42 @@ footer .email{
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+    @media (min-width: 800px){
+
+    #menu-toggle,
+    label[for="menu-toggle"] {
+        display: none;
+    }
+
+    nav ul {
+    max-height: none;     
+    display: flex;
+    gap: 1.5rem;
+    width: auto;
+    }
+    nav li a {
+    padding: 0.5rem 0;
+    }
+
+    .offer-list{
+    display: grid;
+    justify-content: center;
+    grid-gap: 7px;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"list-title ."
+                        "offer-growth offer-investment" 
+                        "offer-mergers offer-transformation"
+                        "offer-advisory offer-innovation";
+    }
+
+    .result-graphs{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:auto auto;
+    justify-items:auto;
+    grid-template-areas:"result-table result-chart";
+
+    }
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -516,5 +553,47 @@ footer .email{
         width: 50%;
     }
 
-
+}
 /* MEDIA QUERIES (LARGE) */
+@media(min-width: 1024px){
+    .offer-list{
+    display: grid;
+    justify-content: center;
+    grid-gap: 7px;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-areas:"list-title list-title list-title"
+                        "offer-growth offer-investment offer-mergers"
+                        "offer-transformation offer-advisory offer-innovation";
+    }
+
+    form{ 
+    display: grid;
+    justify-content: center;
+    grid-gap: 7px 15px;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas: "name email"
+                        "company-name industry-name"
+                        "details submit-form"
+    }
+    .name{
+    grid-area: name;
+    }
+    .email{
+    grid-area: email;
+    }
+    .company-name{
+    grid-area: company-name;
+    }
+    .industry-name{
+    grid-area: industry-name;
+    }
+    .details{
+    grid-area: details;
+    }
+    .submit-form{
+    grid-area: submit-form;
+    height: fit-content;
+    }
+
+
+}
