@@ -229,6 +229,14 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
 .company-tagline{
@@ -277,7 +285,18 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     
 }
 
+main h2, main h3{
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: dropIn 1s ease-out forwards; 
+}
 
+@keyframes dropIn {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .white-background p{
     color: var(--black);
